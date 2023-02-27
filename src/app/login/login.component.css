@@ -1,0 +1,40 @@
+*{
+    font-family: sans-serif;
+}
+.main H2{
+    margin-left: 25%;
+}
+.check-input{
+    border-color: red;
+}
+.login{
+    background-color: rgb(219,227,227);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.main{
+    height: auto;
+    background-color: rgb(206,216,216);
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    border-radius: 20px;
+
+}
+.main form{
+    margin-left: 10px;
+
+}
+.main input{
+    width: 80%;
+}
+
+.main button{
+    width: 40%;
+    color: white;
+    background-color: rgb(47, 75, 4);
+    margin-left: 25%;
+    margin-bottom: 20px;
+
+}

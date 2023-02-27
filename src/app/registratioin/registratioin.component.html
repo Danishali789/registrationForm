@@ -1,0 +1,38 @@
+<section class="registration">
+<div class="main">
+    <h2>Registration</h2>
+    <form [formGroup]="registration" (ngSubmit)="onSubmit()">
+
+        <label> First Name </label>         
+        <input type="text" formControlName="firstname" 
+        [ngClass]="{'check-input': registration.get('firstname')?.invalid && registration.get('firstname')?.touched}"/> <br> <br>  
+      
+        <label> Last Name: </label>         
+        <input type="text" formControlName="lastname" /> <br>
+          <span style="color:red;" *ngIf="lastName && lastName.invalid && lastName.touched">Please fill this field</span>
+        <br>  
+        <br>  
+
+        Email:  <br>
+        <input type="email" id="email" formControlName="email"
+        [ngClass]="{'check-input': registration.get('email')?.invalid && registration.get('email')?.touched}"/> 
+        <div>
+          <!-- <spam *ngIf="registration.get('email').errors['required']">this field is required</spam> -->
+          <!-- <small *ngIf="registration.get('email').errors['email']">Enter a valid mail</small> -->
+        </div>
+        <br>
+        <br> 
+        Password:  
+        <input type="Password" id="pass" formControlName="pass"
+        [ngClass]="{'check-input': registration.get('pass')?.invalid && registration.get('pass')?.touched}"> <br>   
+        <br>  
+        Confirm password:  
+        <input type="Password" id="repass" formControlName="repass"
+        [ngClass]="{'check-input': registration.get('repass')?.invalid && registration.get('repass')?.touched}"> <br> <br>  
+
+       <button type="submit">submit</button>
+       <br>
+       
+    </form>
+</div>
+</section>
